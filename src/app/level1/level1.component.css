@@ -1,0 +1,28 @@
+table.tictactoe-board {
+    background-color: aqua;
+    border-collapse: collapse;
+}
+
+table.tictactoe-board td {
+    --width: 100px;  
+    border: 1px solid gray;
+    width: var(--width);
+    height: var(--width);  
+}
+
+td {
+    font-size: 75px;
+    text-align: center;
+    vertical-align: middle;
+    color: aliceblue;
+    text-shadow: 
+}
+
+.X-box {
+    background-color: rgb(51, 136, 136);
+}
+
+.O-box {
+    background-color: rgb(81, 154, 227);
+}
+
