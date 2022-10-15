@@ -30,7 +30,7 @@ export class Level2Component {
 
   public getStyle(col: number, row: number): string {   
     if (this.boardContent[row][col] !== 0 ) {
-      return `occupied-${this.getPlayerName(col, row)}`;
+      return `${this.getPlayerName(col, row)}-box`;
     }
     return '';
   }
