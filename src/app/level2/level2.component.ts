@@ -6,21 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./level2.component.css']
 })
 export class Level2Component {
-  private currentPlayerIx: number;
-  private currentWinnerIx: number;
+  private currentPlayerIx!: number;
+  private currentWinnerIx!: number;
   private playerName: string[];
 
-  public boardContent: number[][];
+  public boardContent!: number[][];
 
   constructor() {
     this.playerName = ['', 'X', 'O',];
-    this.boardContent = [
-      [ 0, 0, 0],
-      [ 0, 0, 0],
-      [ 0, 0, 0],
-    ];
-    this.currentPlayerIx = 1; 
-    this.currentWinnerIx = 0;
+    this.onRestart();
   }
 
   public getPlayerName(col:number, row: number): string {
@@ -43,4 +37,15 @@ export class Level2Component {
       this.currentPlayerIx = this.currentPlayerIx === 1 ? 2 : 1;
     }
   }
+  
+   public onRestart(): void {
+    this.boardContent = [
+      [ 0, 0, 0],
+      [ 0, 0, 0],
+      [ 0, 0, 0],
+    ];
+    this.currentPlayerIx = 1; 
+    this.currentWinnerIx = 0;
+  }
+
 }
