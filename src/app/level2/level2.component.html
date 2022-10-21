@@ -18,5 +18,5 @@
     </tbody>
 </table>
 
-<h2> Winner ..</h2>
+<h2 [hidden]="winnerIndex === 0"> Winner is {{getWinnerName()}}</h2>
 <button (click)="onRestart()">Restart</button>
